@@ -1,11 +1,20 @@
 :root {
-  --primary-accent: #0d6efd;
+  /* white theme  */
+  /* --primary-accent: #0d6efd;
   --primary-accent-rgba: 13, 110, 253;
   --text-color:#222;
   --background-color: #e3f0f4;
   --card-color: #f4fdfd;
   --stroke-color: #c7d3d6;
-  --text-muted: #92999b;
+  --text-muted: #92999b; */
+ /* dark theme  */
+  --primary-accent: rgb(17, 200, 220);
+  --primary-accent-rgba: 17, 200, 220;
+  --text-color:rgba(255,255,255,0.9);
+  --background-color: #0d151d;
+  --card-color: #232e3d;
+  --stroke-color: rgba(255,255,255,0.15);
+  --text-muted: rgba(255,255,255,0.5);
 }
 
 html,
@@ -117,7 +126,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .border-bottom{
-  border-color: var(--stroke-color);
+  border-color: var(--stroke-color) !important;
 }
 
 .card-title-sm{
