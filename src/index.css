@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-accent: #0d6efd;
+  --primary-accent-rgba: 13, 110, 253;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f2f2f2; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ccc; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+  }
+
+#root {
+  height: 100%;
+}
+
+#LeftNavbar {
+ width: 33%;
+}
+
+#LeftNavbar .card {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#MainContent {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+.btn-new {
+  background: transparent;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-new:hover {
+  color: var(--primary-accent);
+  background: rgba(var(--primary-accent-rgba), 0.1);
+}
+
+.card {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-accent);
+  box-shadow: 4px 4px 12px rgba(var(--primary-accent-rgba), 0.1);
+}
+
+.card:focus {
+  outline-color: var(--primary-accent);
+  box-shadow: 4px 4px 12px rgba(var(--primary-accent-rgba), 0.1);
+}
+
+.card-title-sm, .card-text {
+  font-size: 0.9rem;
+}
+
