@@ -3,27 +3,35 @@ import MainContent from "./MainContent.js"
 
 import {useState, useEffect} from "react";
 
+const gSheetScheduleID = '1TNURmlgoChcAuGTcfihctMXGg6w7rKdYIll_ovAuCO0';
+
 
 export default function App(){
 
-    const [imgArray, addImg] = useState([]);
+    const [astroArray, addAstro] = useState([]);
     const [post, havePosted] = useState(0);
 
     useEffect(() => {
-        fetch("https://api.artic.edu/api/v1/artworks/search?limit=100")
-          .then(res => res.json())
-          .then(
-            (result) => {
-            console.log(result);
-            addImg(result.data);
-              console.log("we have run now");
+        fetch(`https://docs.google.com/spreadsheets/d/${gSheetScheduleID}/gviz/tq?sheet=Astrosigns&tqx=out:json`)
+        .then((res) => res.text())
+        .then((text) => {
+          const json = JSON.parse(text.substr(47).slice(0, -2));
+          let testArray = json.table.rows.map((item,index) => {
+            return {
+                id:`astro-${index}`,
+                name: item.c[0].v,
+                date: item.c[1].v,
+                desc: item.c[2].v,
             }
-          )
+          });
+          console.log(testArray);
+          addAstro(testArray);
+          })
       }, [post]);
     return(
-        <div className="d-flex justify-content-between h-100">
-            <LeftNavbar array={imgArray} />
-            <MainContent array={imgArray} />
+        <div className="container d-flex justify-content-between h-100">
+            <LeftNavbar array={astroArray} />
+            <MainContent array={astroArray} />
         </div>
     )
 }
