@@ -2,11 +2,13 @@ import Astrosigns from "./Astrosigns"
 
 import Card from "./Card"
 
+let date = new Date();
+
 export default function MainContent(props){
 
     return(
         <div id="MainContent" className="p-3">
-            <h2 className="py-3">🌞 Daily Horoscopes 🌚</h2>
+            <h2 className="py-3">🌞 Daily Horoscopes - {date.toDateString()} 🌚</h2>
             {props.array.map((item, index) => (
             <Card id={item.id} key={index} name={item.name} date={item.date} text={item.desc} size="" />
         ))}
