@@ -24,7 +24,6 @@ export default function App(){
                 desc: item.c[2].v,
             }
           });
-          console.log(testArray);
           addAstro(testArray);
           })
       }, [post]);
