@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-astro/static/css/main.63d46eb2.css",
-    "main.js": "/react-astro/static/js/main.09f11627.js",
+    "main.js": "/react-astro/static/js/main.a8f414ae.js",
     "index.html": "/react-astro/index.html",
     "main.63d46eb2.css.map": "/react-astro/static/css/main.63d46eb2.css.map",
-    "main.09f11627.js.map": "/react-astro/static/js/main.09f11627.js.map"
+    "main.a8f414ae.js.map": "/react-astro/static/js/main.a8f414ae.js.map"
   },
   "entrypoints": [
     "static/css/main.63d46eb2.css",
-    "static/js/main.09f11627.js"
+    "static/js/main.a8f414ae.js"
   ]
 }
